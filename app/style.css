@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+.container {
+    display: flex;
+}
+
+.img-container {
+    position: relative;
+    display: flex;
+    align-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+}
+
+.img-container img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.img-container canvas {
+    position: absolute;
+    left: 0;
+}
