@@ -1,7 +1,9 @@
 import faceapi from 'https://cdn.pika.dev/face-api.js';
 
 const loadSsdMobilenetv1 = () => {
-    return faceapi.nets.ssdMobilenetv1.loadFromUri('https://raw.githubusercontent.com/justadudewhohacks/face-api.js-models/master/ssd_mobilenetv1/ssd_mobilenetv1_model-weights_manifest.json');
+    const baseUrl = 'https://raw.githubusercontent.com/justadudewhohacks/face-api.js-models';
+    const model = 'master/ssd_mobilenetv1/ssd_mobilenetv1_model-weights_manifest.json';
+    return faceapi.nets.ssdMobilenetv1.loadFromUri(`${baseUrl}/${model}`);
 };
 
 const calculateImageDetections = async (imgEl) => {
